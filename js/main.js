@@ -1,12 +1,14 @@
-let config = {
+var config = {
   type: Phaser.AUTO,
   width: 1280,
   height: 720,
-  scene: {
-    preload: preload,
-    create: create,
-    update: update
-  }
+  backgroundColor: 0x000000,
+  scene: [Scene_Title, Scene_CharacterSelect],
+  pixelArt: true
 }
-// ゲームを作成
-let game = new Phaser.Game(config);
+
+window.onload = function () {
+  // ゲームを作成
+  var game = new Phaser.Game(config);
+
+}

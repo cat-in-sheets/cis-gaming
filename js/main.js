@@ -1,14 +1,21 @@
-var config = {
+// main.js
+import Phaser from "phaser";
+import BootScene from "./scenes/BootScene";
+import TitleScene from "./scenes/TitleScene";
+import GameScene from "./scenes/GameScene";
+
+const config = {
   type: Phaser.AUTO,
-  width: 1280,
-  height: 720,
-  backgroundColor: 0x000000,
-  scene: [Scene_Title, Scene_CharacterSelect],
-  pixelArt: true
-}
+  width: 878,
+  height: 960,
+  scene: [BootScene, TitleScene, GameScene],
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 0 },
+      debug: false,
+    },
+  },
+};
 
-window.onload = function () {
-  // ゲームを作成
-  var game = new Phaser.Game(config);
-
-}
+const game = new Phaser.Game(config);

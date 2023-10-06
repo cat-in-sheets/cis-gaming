@@ -8,6 +8,7 @@ const config = {
   type: Phaser.AUTO,
   width: 878,
   height: 960,
+  backgroundColor: '#ffffff', // ここで背景色を設定
   scene: [BootScene, TitleScene, GameScene],
   physics: {
     default: "arcade",

@@ -43,6 +43,8 @@ class BootScene extends Phaser.Scene {
 
   create() {
     // アセットの読み込みが完了したら、次のシーン（例: TitleScene）に移動します
+    console.log("BootScene");
+    
     this.scene.start("TitleScene");
   }
 }
